@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import networkx as nx
 
-from hw_1.astvisitor import NxVisitor
+from astvisitor import NxVisitor
 
 
 def get_sizes(tree, root, sizes):

@@ -1,7 +1,7 @@
 import ast
 import sys
 
-from hw_1.drawing import draw_tree
+from drawing import draw_tree
 
 
 def read_code(path):

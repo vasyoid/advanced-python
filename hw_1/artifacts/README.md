@@ -3,7 +3,7 @@
 Запуск:
 
 ```shell
-$ python main.py sample.py
+$ python main.py [-p sample.py -o artifacts/sample.png]
 ```
 
 Результат:

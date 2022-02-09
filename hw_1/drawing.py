@@ -35,7 +35,7 @@ def tree_layout(tree, root):
     return _tree_layout(root, {}), width, height
 
 
-def draw_tree(tree):
+def draw_tree(tree, output):
     visitor = NxVisitor()
     visitor.visit(tree)
     graph = nx.tree_graph(visitor.root)
@@ -44,4 +44,7 @@ def draw_tree(tree):
     colors = [visitor.colors[node] for node in graph]
     nx.draw(graph, pos, node_color=colors, labels=visitor.labels, with_labels=True, node_size=4000, node_shape="s")
     nx.draw_networkx_edge_labels(graph, pos, edge_labels=visitor.edge_labels)
-    plt.show()
+    if output is None:
+        plt.show()
+    else:
+        plt.savefig(output)

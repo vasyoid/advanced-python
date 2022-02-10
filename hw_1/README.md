@@ -8,5 +8,5 @@ $ python main.py [-p sample.py -o artifacts/sample.png]
 
 Результат:
 
-![Sample AST](./sample.png)
+![Sample AST](artifacts/sample.png)
 

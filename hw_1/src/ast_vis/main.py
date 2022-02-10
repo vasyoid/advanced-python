@@ -2,8 +2,11 @@ import ast
 import click
 import inspect
 
-from drawing import draw_tree
-from hw_1 import sample
+from hw_1.src.ast_vis.drawing import draw_tree
+from hw_1.src.ast_vis import sample
+
+
+__all__ = ['generate']
 
 
 def read_code(path):
@@ -11,10 +14,7 @@ def read_code(path):
         return file.read()
 
 
-@click.command()
-@click.option('-p', '--path', default=None)
-@click.option('-o', '--output', default=None)
-def main(path, output):
+def generate(path, output):
     if path is None:
         code = inspect.getsource(sample.fib)
     else:
@@ -24,6 +24,13 @@ def main(path, output):
     tree = ast.parse(code)
     print(ast.dump(tree, indent=" "))
     draw_tree(tree, output)
+
+
+@click.command()
+@click.option('-p', '--path', default=None)
+@click.option('-o', '--output', default=None)
+def main(path, output):
+    generate(path, output)
 
 
 if __name__ == '__main__':

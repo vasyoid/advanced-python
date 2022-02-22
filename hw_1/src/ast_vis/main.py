@@ -2,8 +2,8 @@ import ast
 import click
 import inspect
 
-from hw_1.src.ast_vis.drawing import draw_tree
-from hw_1.src.ast_vis import sample
+from ast_vis.drawing import draw_tree
+from ast_vis import sample
 
 
 __all__ = ['generate']

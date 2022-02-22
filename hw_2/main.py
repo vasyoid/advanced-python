@@ -2,7 +2,7 @@ import os
 
 from ast_vis.main import generate
 from generators import *
-from hw_2 import sample
+import sample
 
 
 def gen_tex(data):

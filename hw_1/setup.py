@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="ast_vis_vasyoid",
-    version="0.0.4",
+    version="0.0.5",
     author="Vasily Kuporosov",
     author_email="vasyoid@gmail.com",
     description="A package that draws ASTs",

@@ -11,8 +11,8 @@ def gen_tex(data):
 
 def build_pdf(name):
     os.system(
-        f"xelatex -interaction=nonstopmode -halt-on-error -output-directory . {name}.tex && "
-        f"rm artifacts/{name}.aux artifacts_host/{name}.log")
+        f"cd artifacts_host && xelatex -interaction=nonstopmode -halt-on-error -output-directory . {name}.tex && "
+        f"rm {name}.aux {name}.log")
 
 
 def main():

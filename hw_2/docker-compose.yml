@@ -1,0 +1,5 @@
+services:
+  backend:
+    image: dockertex
+    volumes:
+      - ./artifacts:/root/advanced-python/hw_2/artifacts_host

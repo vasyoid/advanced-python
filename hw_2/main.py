@@ -10,18 +10,14 @@ def gen_tex(data):
 
 
 def build_pdf(name):
-    # os.system("docker build -t dockertex .")
-    os.system(f"""docker run -d -it -v {os.path.abspath(os.getcwd())}/artifacts:/root/ --name dockertex dockertex
-    docker exec dockertex xelatex -interaction=nonstopmode -halt-on-error -output-directory . {name}.tex
-    docker kill dockertex
-    docker rm dockertex
-    rm artifacts/{name}.aux artifacts/{name}.log
-    """)
+    os.system(
+        f"xelatex -interaction=nonstopmode -halt-on-error -output-directory . {name}.tex && "
+        f"rm artifacts/{name}.aux artifacts_host/{name}.log")
 
 
 def main():
-    generate(None, "artifacts/ast.png")
-    with open("artifacts/output.tex", "wt") as file:
+    generate(None, "artifacts_host/ast.png")
+    with open("artifacts_host/output.tex", "wt") as file:
         file.write(gen_tex(sample.table))
     build_pdf("output")
 

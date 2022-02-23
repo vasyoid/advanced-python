@@ -4,3 +4,6 @@ click==8.0.3
 build==0.7.0
 --extra-index-url https://test.pypi.org/simple/
 ast-vis-vasyoid==0.0.5
+
+setuptools==57.0.0
+numpy==1.22.2

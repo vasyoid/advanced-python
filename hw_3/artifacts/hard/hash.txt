@@ -1,0 +1,8 @@
+hash(A) = 2379
+hash(B) = 2380
+hash(C) = 2379
+hash(D) = 2380
+hash(AB) = 4746
+hash(CD_cached) = 4746
+hash(CD) = 4914
+

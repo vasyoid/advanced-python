@@ -1,0 +1,3 @@
+sequential 23.275 sec
+threads 20.447 sec
+processes 4.107 sec

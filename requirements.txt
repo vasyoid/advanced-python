@@ -7,3 +7,4 @@ ast-vis-vasyoid==0.0.5
 
 setuptools==57.0.0
 numpy==1.22.2
+aiohttp==3.8.1
